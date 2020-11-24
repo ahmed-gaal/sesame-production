@@ -1,0 +1,59 @@
+data extraction:
+  cmd: python sesame/create_dataset.py
+  deps:
+  - path: sesame/create_dataset.py
+    md5: 08fb09aec6503a574d6bb79e869f9c4c
+    size: 1083
+  outs:
+  - path: assets/data
+    md5: 51976864b41ab77aec6de7f74dc9b786.dir
+    size: 73378
+    nfiles: 2
+feature extraction:
+  cmd: python sesame/extract_features.py
+  deps:
+  - path: assets/data
+    md5: 51976864b41ab77aec6de7f74dc9b786.dir
+    size: 73378
+    nfiles: 2
+  - path: sesame/extract_features.py
+    md5: c2da26092861f75abdbcd978ca476ce9
+    size: 1771
+  outs:
+  - path: assets/features
+    md5: 31b5ff5f6d667bb08afb2f7b299c3372.dir
+    size: 260070
+    nfiles: 4
+model training:
+  cmd: python sesame/train_model.py
+  deps:
+  - path: assets/features
+    md5: 31b5ff5f6d667bb08afb2f7b299c3372.dir
+    size: 260070
+    nfiles: 4
+  - path: sesame/train_model.py
+    md5: 3c9f09f0c0a619fc40ac2ecbf0eed163
+    size: 720
+  outs:
+  - path: assets/models
+    md5: d801f43d4ae10a0caf5039cc5cf88aaf.dir
+    size: 484
+    nfiles: 1
+model evaluation:
+  cmd: python sesame/evaluate_model.py
+  deps:
+  - path: assets/features
+    md5: 31b5ff5f6d667bb08afb2f7b299c3372.dir
+    size: 260070
+    nfiles: 4
+  - path: assets/models
+    md5: d801f43d4ae10a0caf5039cc5cf88aaf.dir
+    size: 484
+    nfiles: 1
+  - path: sesame/evaluate_model.py
+    md5: 5a2cf821bf4364f6ac0f65b0c142095e
+    size: 888
+  outs:
+  - path: assets/metrics.json
+    md5: 267fdfe49b72a5b332ce47462dba78b1
+    size: 61

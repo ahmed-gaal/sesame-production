@@ -1,0 +1,30 @@
+stages:
+  data extraction:
+    cmd: python sesame/create_dataset.py
+    deps:
+    - sesame/create_dataset.py
+    outs:
+    - assets/data
+  feature extraction:
+    cmd: python sesame/extract_features.py
+    deps:
+    - assets/data
+    - sesame/extract_features.py
+    outs:
+    - assets/features
+  model training:
+    cmd: python sesame/train_model.py
+    deps:
+    - assets/features
+    - sesame/train_model.py
+    outs:
+    - assets/models
+  model evaluation:
+    cmd: python sesame/evaluate_model.py
+    deps:
+    - assets/features
+    - assets/models
+    - sesame/evaluate_model.py
+    metrics:
+    - assets/metrics.json:
+        cache: false
