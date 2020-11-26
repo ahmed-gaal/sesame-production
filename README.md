@@ -1,4 +1,7 @@
 # sesame-production
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4db1cb9e961d4516b4c65b086d18a8c6)](https://app.codacy.com/gh/ahmed14-cell/sesame-production?utm_source=github.com&utm_medium=referral&utm_content=ahmed14-cell/sesame-production&utm_campaign=Badge_Grade)
+
 This is a Machine Learning Pipeline that consists of extracting the data from
 a remote storage. From the data obtained, feature extraction, preprocessing and
 transformation occurs. After which a machine learning algorithm is applied to
