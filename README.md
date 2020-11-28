@@ -1,4 +1,5 @@
 # Sesame-Production
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4db1cb9e961d4516b4c65b086d18a8c6)](https://app.codacy.com/gh/ahmed14-cell/sesame-production?utm_source=github.com&utm_medium=referral&utm_content=ahmed14-cell/sesame-production&utm_campaign=Badge_Grade)
 The data used in this workflow has been obtained from the United Nations
 Food and Agriculture Organisations' public data portal. The objective of
 this ML Workflow is to accurately predict the Production Quantity of
