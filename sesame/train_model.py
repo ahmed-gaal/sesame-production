@@ -14,7 +14,7 @@ x_train = pd.read_csv(str(Config.features_path / 'train_features.csv'))
 y_train = pd.read_csv(str(Config.features_path / 'train_target.csv'))
 
 # Instantiating and fitting the algorithm
-model = KernelRidge(alpha=1, kernel='poly', degree=3)
+model = KernelRidge(alpha=1, kernel='poly', degree=4)
 model = model.fit(x_train, y_train.to_numpy().ravel())
 
 # Saving the model into a pickle file
