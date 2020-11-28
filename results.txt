@@ -138,3 +138,83 @@ tree4-experiment:
 	assets/metrics.json:
 		r_squared: 0.8989726456234777
 		rmse: 0.31784800514793604
+workspace:
+	assets/metrics.json:
+		r_squared: 0.9798822246137991
+		rmse: 0.14183714388763208
+adaboost4-experiment:
+	assets/metrics.json:
+		r_squared: 0.9566230446281389
+		rmse: 0.20827135033859337
+elasticnet-experiment:
+	assets/metrics.json:
+		r_squared: 0.30959813705832073
+		rmse: 0.8309042441471094
+forest100-experiment:
+	assets/metrics.json:
+		r_squared: 0.9459431495080023
+		rmse: 0.23250129137705397
+forest_500-experiment:
+	assets/metrics.json:
+		r_squared: 0.9748222952890212
+		rmse: 0.1586748395650008
+gradient_boosting-experiment:
+	assets/metrics.json:
+		r_squared: 0.9730996310616755
+		rmse: 0.1640133193930434
+gradient_boosting-experiment2:
+	assets/metrics.json:
+		r_squared: 0.9730996310616755
+		rmse: 0.1640133193930434
+gradient_boosting200-experiment:
+	assets/metrics.json:
+		r_squared: 0.9738910532252015
+		rmse: 0.1615826314143894
+kernel_ridge-experiment:
+	assets/metrics.json:
+		r_squared: 0.6935414529120796
+		rmse: 0.5535869824046808
+kernel_ridge_alpha2-experiment:
+	assets/metrics.json:
+		r_squared: 0.693546241726102
+		rmse: 0.5535826571289042
+kernel_ridge_alpha3-experiment:
+	assets/metrics.json:
+		r_squared: 0.6935508030710551
+		rmse: 0.5535785372726663
+kernel_ridge_poly-experiment:
+	assets/metrics.json:
+		r_squared: 0.9798272986869249
+		rmse: 0.14203063512170572
+kernel_ridge_poly_degree4-experiment:
+	assets/metrics.json:
+		r_squared: 0.9798822246137991
+		rmse: 0.14183714388763208
+lasso-experiment:
+	assets/metrics.json:
+		r_squared: 0.0
+		rmse: 0.9999999999999999
+ols-experiment:
+	assets/metrics.json:
+		r_squared: 0.6935364360698943
+		rmse: 0.5535915136001506
+ridge-experiment:
+	assets/metrics.json:
+		r_squared: 0.6935414529120751
+		rmse: 0.5535869824046847
+svr-experiment:
+	assets/metrics.json:
+		r_squared: 0.9707229238334956
+		rmse: 0.1711054533511555
+svr_linear-experiment:
+	assets/metrics.json:
+		r_squared: 0.6705469578610387
+		rmse: 0.5739800015148274
+tree3-experiment:
+	assets/metrics.json:
+		r_squared: 0.8774625290665845
+		rmse: 0.3500535258120041
+tree4-experiment:
+	assets/metrics.json:
+		r_squared: 0.8989726456234777
+		rmse: 0.31784800514793604
