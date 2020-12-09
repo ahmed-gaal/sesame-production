@@ -3,7 +3,7 @@ This is a script to train a model with a variety of estimators
 '''
 import pickle
 import pandas as pd
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import GradientBoostingRegressor
 from config import Config
 
 # Creating a path to save our model
@@ -14,8 +14,7 @@ x_train = pd.read_csv(str(Config.features_path / 'train_features.csv'))
 y_train = pd.read_csv(str(Config.features_path / 'train_target.csv'))
 
 # Instantiating and fitting the algorithm
-model = RandomForestRegressor(n_estimators=200, criterion='mse', max_depth=4,
-                              n_jobs=-1, random_state=Config.random_seed)
+model = GradientBoostingRegressor(max_depth=2, n_estimators=1800)
 model = model.fit(x_train, y_train.to_numpy().ravel())
 
 # Saving the model into a pickle file

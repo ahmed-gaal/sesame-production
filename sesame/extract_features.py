@@ -20,7 +20,7 @@ def feature_extraction(dframe):
     '''
     Function for extracting and preprocessing features
     '''
-    features = dframe[['Year', 'Area harvested', 'Yield']]
+    features = dframe[['Area harvested', 'Yield']]
     scale = StandardScaler()
     preprocessed = scale.fit_transform(features)
     return preprocessed
@@ -30,10 +30,10 @@ train_features = feature_extraction(train_df)
 test_features = feature_extraction(test_df)
 
 # Saving the preprocessed features to our path
-pd.DataFrame(train_features).to_csv(
+pd.DataFrame(train_features, columns=['Area harvested', 'Yield']).to_csv(
     str(Config.features_path / 'train_features.csv'), index=None
 )
-pd.DataFrame(test_features).to_csv(
+pd.DataFrame(test_features, columns=['Area harvested', 'Yield']).to_csv(
     str(Config.features_path / 'test_features.csv'), index=None
 )
 
@@ -53,9 +53,9 @@ train_target = preprocess_target(train_df)
 test_target = preprocess_target(test_df)
 
 # Saving the preprocessed target to our path
-pd.DataFrame(train_target).to_csv(
+pd.DataFrame(train_target, columns=[['Production']]).to_csv(
     str(Config.features_path / 'train_target.csv'), index=None
 )
-pd.DataFrame(test_target).to_csv(
+pd.DataFrame(test_target, columns=['Production']).to_csv(
     str(Config.features_path / 'test_target.csv'), index=None
 )
