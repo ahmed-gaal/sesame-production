@@ -32,12 +32,12 @@ model training:
     size: 196678
     nfiles: 4
   - path: sesame/train_model.py
-    md5: ff76d0cebdfba744c0e1654b2e64173d
-    size: 764
+    md5: 461f4c81880a142e176c76f24b2872bb
+    size: 740
   outs:
   - path: assets/models
-    md5: 8a91f2b60e159f25eba36d5323b64cd0.dir
-    size: 1244180
+    md5: 64d0907e6ed57ce15255bc8f02a5204b.dir
+    size: 16417
     nfiles: 1
 model evaluation:
   cmd: python sesame/evaluate_model.py
@@ -47,13 +47,13 @@ model evaluation:
     size: 196678
     nfiles: 4
   - path: assets/models
-    md5: 8a91f2b60e159f25eba36d5323b64cd0.dir
-    size: 1244180
+    md5: 64d0907e6ed57ce15255bc8f02a5204b.dir
+    size: 16417
     nfiles: 1
   - path: sesame/evaluate_model.py
     md5: 5a2cf821bf4364f6ac0f65b0c142095e
     size: 888
   outs:
   - path: assets/metrics.json
-    md5: c758f3234c684f6353886d813e798d31
+    md5: c35e51424fcf668e8cc1a6ba86da74fe
     size: 62
