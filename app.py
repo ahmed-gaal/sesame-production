@@ -1,6 +1,6 @@
+import pickle
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-import pickle
 from sesame.config import Config
 
 app = Flask(__name__)
