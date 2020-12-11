@@ -17,8 +17,8 @@ feature extraction:
     size: 73378
     nfiles: 2
   - path: sesame/extract_features.py
-    md5: c1f4f50436795557629007de1dfc2bac
-    size: 1887
+    md5: 7bd16ca1245c627df1189b457b1fa99a
+    size: 1889
   outs:
   - path: assets/features
     md5: b81a3777a8854889d3e8822ff8c9e9de.dir
