@@ -4,7 +4,6 @@ from flask import Flask, request, jsonify, render_template
 from sesame.config import Config
 
 app = Flask(__name__)
-server = app.server
 model = pickle.load(open(str(Config.models_path / 'model.pickle'), 'rb'))
 
 @app.route('/')
