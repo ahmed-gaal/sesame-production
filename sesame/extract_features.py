@@ -30,10 +30,10 @@ train_features = feature_extraction(train_df)
 test_features = feature_extraction(test_df)
 
 # Saving the preprocessed features to our path
-pd.DataFrame(train_features, columns=[ 'Area harvested', 'Yield']).to_csv(
+pd.DataFrame(train_features, columns=['Area harvested', 'Yield']).to_csv(
     str(Config.features_path / 'train_features.csv'), index=None
 )
-pd.DataFrame(test_features, columns=[ 'Area harvested', 'Yield']).to_csv(
+pd.DataFrame(test_features, columns=['Area harvested', 'Yield']).to_csv(
     str(Config.features_path / 'test_features.csv'), index=None
 )
 
