@@ -1,6 +1,4 @@
-'''
-This is a script to create and obtain the data from remote storage
-'''
+'''This is a script to create and obtain the data from remote storage.'''
 import os
 import pandas as pd
 import numpy as np

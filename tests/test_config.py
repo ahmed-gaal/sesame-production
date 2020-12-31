@@ -1,4 +1,4 @@
-"""This is a script to test all the configuration details."""
+"""The following is a script to test all the configuration details."""
 import unittest
 from pathlib import Path
 from sesame.config import Config

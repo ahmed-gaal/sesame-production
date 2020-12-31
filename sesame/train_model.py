@@ -1,6 +1,4 @@
-'''
-This is a script to train a model with a variety of estimators
-'''
+'''This is a script to train a model with a variety of estimators.'''
 from sklearn.ensemble import AdaBoostRegressor
 from config import Config
 from functions import Pipeline as pp

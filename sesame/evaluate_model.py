@@ -1,6 +1,4 @@
-'''
-This is a script to evaluate the accuracy of the model created earlier
-'''
+'''This is a script to evaluate the accuracy of the model created earlier.'''
 import pandas as pd
 from config import Config
 from functions.pipeline import Pipeline as pp
