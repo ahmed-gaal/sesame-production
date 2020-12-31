@@ -1,11 +1,7 @@
 '''
 This is a script to evaluate the accuracy of the model created earlier
 '''
-import pickle
-import json
-import numpy as np
 import pandas as pd
-from sklearn.metrics import r2_score, mean_squared_error
 from config import Config
 from functions.pipeline import Pipeline as pp
 
@@ -25,4 +21,3 @@ rmse = pp.calculate_rmse(ground_truth=y_test, predictions=y_pred)
 
 # Saving our results in a JSON file
 pp.dump_json(metric_1=r2, metric_2=rmse)
-
