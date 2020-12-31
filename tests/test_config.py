@@ -1,3 +1,4 @@
+"""This is a script to test all the configuration details."""
 import unittest
 from pathlib import Path
 from sesame.config import Config
@@ -33,4 +34,3 @@ class TestConfigFile(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-    
