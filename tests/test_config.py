@@ -31,3 +31,6 @@ class TestConfigFile(unittest.TestCase):
         con = Config()
         self.assertEqual(con.metrics_path, Path('./assets/metrics.json'))
 
+if __name__ == "__main__":
+    unittest.main()
+    
