@@ -7,6 +7,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 import gdown
 from config import Config
+from functions import Pipeline as pp
 
 # Setting the random seed generator
 np.random.seed(Config.random_seed)
@@ -30,5 +31,5 @@ df_train, df_test = train_test_split(df, test_size=0.2,
                                      random_state=random)
 
 # Saving our splitted data to the path we created earlier
-df_train.to_csv(str(Config.dataset_path / 'train.csv'), index=None)
-df_test.to_csv(str(Config.dataset_path / 'test.csv'), index=None)
+pp.dump_dataset(dataset=df_train, data='train.csv')
+pp.dump_dataset(dataset=df_test, data='test.csv')
