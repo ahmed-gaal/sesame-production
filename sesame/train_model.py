@@ -1,8 +1,6 @@
 '''
 This is a script to train a model with a variety of estimators
 '''
-import pickle
-import pandas as pd
 from sklearn.ensemble import AdaBoostRegressor
 from config import Config
 from functions import Pipeline as pp
