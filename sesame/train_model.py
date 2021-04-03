@@ -1,5 +1,5 @@
 '''This is a script to train a model with a variety of estimators.'''
-from sklearn.ensemble import AdaBoostRegressor
+from xgboost import XGBRegressor
 from config import Config
 from functions import Pipeline as pp
 
@@ -11,8 +11,9 @@ x_train = pp.load_features(data='train_features.csv')
 y_train = pp.load_features(data='train_target.csv')
 
 # Instantiating and fitting the algorithm
-model = AdaBoostRegressor(learning_rate=1.0, loss='square',
-                  n_estimators=50, random_state=42)
+model = XGBRegressor(
+    objective='reg:squarederror', n_estimators=1000, max_depth=5
+)
 model = model.fit(x_train, y_train.to_numpy().ravel())
 
 # Saving the model into a pickle file

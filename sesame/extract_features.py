@@ -40,22 +40,29 @@ pd.DataFrame(test_features, columns=['Area harvested', 'Yield']).to_csv(
 # Creating a function to preprocess our target variable
 
 
-def preprocess_target(dframe):
-    '''
-    Function for extracting and preprocessing the target
-    '''
-    features = dframe['Production'].values.reshape(-1, 1)
-    scale = StandardScaler()
-    return scale.fit_transform(features)
+#def preprocess_target(dframe):
+#    '''
+#    Function for extracting and preprocessing the target
+#    '''
+#    features = dframe['Production'].values.reshape(-1, 1)
+#    scale = StandardScaler()
+#    return scale.fit_transform(features)
 
 
-train_target = preprocess_target(train_df)
-test_target = preprocess_target(test_df)
+#train_target = preprocess_target(train_df)
+#test_target = preprocess_target(test_df)
 
-# Saving the preprocessed target to our path
-pd.DataFrame(train_target, columns=[['Production']]).to_csv(
+## Saving the preprocessed target to our path
+#pd.DataFrame(train_target, columns=[['Production']]).to_csv(
+#    str(Config.features_path / 'train_target.csv'), index=None
+#)
+#pd.DataFrame(test_target, columns=['Production']).to_csv(
+#    str(Config.features_path / 'test_target.csv'), index=None
+#)
+
+train_df.Production.to_csv(
     str(Config.features_path / 'train_target.csv'), index=None
 )
-pd.DataFrame(test_target, columns=['Production']).to_csv(
+test_df.Production.to_csv(
     str(Config.features_path / 'test_target.csv'), index=None
 )
