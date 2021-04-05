@@ -1,5 +1,5 @@
 '''This is a script to train a model with a variety of estimators.'''
-from xgboost import XGBRegressor
+from sklearn.ensemble import RandomForestRegressor
 from config import Config
 from functions import Pipeline as pp
 
@@ -11,9 +11,7 @@ x_train = pp.load_features(data='train_features.csv')
 y_train = pp.load_features(data='train_target.csv')
 
 # Instantiating and fitting the algorithm
-model = XGBRegressor(
-    objective='reg:squarederror', n_estimators=10000, max_depth=5
-)
+model = RandomForestRegressor(n_estimators=9000)
 model = model.fit(x_train, y_train.to_numpy().ravel())
 
 # Saving the model into a pickle file
