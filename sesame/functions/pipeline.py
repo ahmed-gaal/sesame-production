@@ -14,39 +14,42 @@ class Pipeline:
 
     def __init__(self):
         """Initializing the class."""
+        pass
 
 
-    def load_features(self, data=None):
+    def load_features(data=None):
         """Function to load features from directory."""
-        data = pd.read_csv(str(Config.features_path / self.data))
+        data = pd.read_csv(str(Config.features_path / data))
         return data
 
 
-    def calculate_r2(self, ground_truth=None, predictions=None):
+    def calculate_r2(ground_truth=None, predictions=None):
         """Function to calculate coefficient of determination."""
-        r2 = r2_score(self.ground_truth, self.predictions)
+        r2 = r2_score(ground_truth, predictions)
+        r2 = round(r2, 3)
         return r2
 
 
-    def calculate_rmse(self, ground_truth=None, predictions=None):
+    def calculate_rmse(ground_truth=None, predictions=None):
         """Function to calculate root mean squared error."""
         rmse = np.sqrt(mean_squared_error(
-            self.ground_truth, self.predictions
+            ground_truth, predictions
         ))
+        rmse = round(rmse, 3)
         return rmse
 
 
-    def load_pickle(self, filename=None, funct=None):
+    def load_pickle(filename=None, funct=None):
         """Function load pickle file."""
         return pickle.load(open(
-            str(Config.models_path / self.filename), self.funct
+            str(Config.models_path / filename), funct
         ))
 
 
-    def dump_pickle(self, model, filename=None, funct=None):
+    def dump_pickle(model, filename=None, funct=None):
         """Function to save model to a pickle file."""
-        return pickle.dump(self.model, open(
-            str(Config.models_path / self.filename), self.funct
+        return pickle.dump(model, open(
+            str(Config.models_path / filename), funct
         ))
                 
         
@@ -55,9 +58,10 @@ class Pipeline:
         dataset.to_csv(str(Config.dataset_path / data), index=None)
 
     
-    def dump_json(self, metric_1=None, metric_2=None):
+    def dump_json(metric_1=None, metric_2=None):
         """Save metrics calculated to a json file."""
         with open(str(Config.metrics_path), 'w') as outfile:
             json.dump(
-                dict(r_squared=self.metric_1, rmse=self.metric_2), outfile
+                dict(r_squared=metric_1, rmse=metric_2), outfile
             )
+
