@@ -34,12 +34,12 @@ stages:
       size: 147711
       nfiles: 4
     - path: sesame/train_model.py
-      md5: 2d9ce6d83c996476be1ac209ed23e0af
-      size: 695
+      md5: 7fcb6a76524d52c82d31733316b09277
+      size: 706
     outs:
     - path: assets/models
-      md5: c564b0b35490c0615dd8f4595ff7b2e2.dir
-      size: 1636951135
+      md5: b57dcf4e1ca21f0c31ae379b06419981.dir
+      size: 46190480
       nfiles: 1
   model evaluation:
     cmd: python sesame/evaluate_model.py
@@ -49,13 +49,13 @@ stages:
       size: 147711
       nfiles: 4
     - path: assets/models
-      md5: c564b0b35490c0615dd8f4595ff7b2e2.dir
-      size: 1636951135
+      md5: b57dcf4e1ca21f0c31ae379b06419981.dir
+      size: 46190480
       nfiles: 1
     - path: sesame/evaluate_model.py
       md5: d5c483b4abdbd2aaca25bd2cd08b5007
       size: 798
     outs:
     - path: assets/metrics.json
-      md5: 47ae8535e9b299dd994ff3b40bc34f4a
+      md5: 84842315cd17d13a8707a80251b7ec65
       size: 39
