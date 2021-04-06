@@ -12,7 +12,7 @@ y_train = pp.load_features(data='train_target.csv')
 
 # Instantiating and fitting the algorithm
 model = XGBRegressor(
-    max_depth=8, learning_rate=0.2, n_estimators=9500
+    max_depth=8, learning_rate=0.2, n_estimators=500
 )
 model = model.fit(x_train, y_train.to_numpy().ravel())
 
